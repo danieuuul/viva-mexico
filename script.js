@@ -378,14 +378,12 @@ document.querySelector('#music-button').addEventListener('click', () => {
     playMusic().then(() => {
       button.classList.add('is-playing')
       button.setAttribute('aria-label', 'Turn off background music')
-      document.querySelector('#music-status').textContent =
-        'Ambient sound on'
+      document.querySelector('#music-status').textContent = 'Ambient sound on'
     })
   } else {
     backgroundMusic.pause()
     button.classList.remove('is-playing')
     button.setAttribute('aria-label', 'Turn on background music')
-    document.querySelector('#music-status').textContent =
-      'Ambient sound off'
+    document.querySelector('#music-status').textContent = 'Ambient sound off'
   }
 })

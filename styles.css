@@ -263,14 +263,6 @@ h2 {
   transform: rotate(5deg);
   z-index: 3;
 }
-.decor-hat {
-  width: 180px;
-  height: 126px;
-  left: 130px;
-  bottom: -2px;
-  transform: rotate(-12deg);
-  z-index: 2;
-}
 .decor-katrina {
   width: 142px;
   height: 190px;
@@ -463,9 +455,11 @@ h2 {
     display: block;
     min-height: 0;
     margin-bottom: 20px;
+    position: relative;
   }
   .hero-copy {
     margin-bottom: 18px;
+    padding-right: 86px;
   }
   .eyebrow {
     margin-bottom: 9px;
@@ -478,40 +472,39 @@ h2 {
     margin-top: 12px;
   }
   .mexico-decor {
-    height: 170px;
-    margin: 4px 0 12px;
+    position: absolute;
+    width: 122px;
+    height: 82px;
+    right: -2px;
+    top: -11px;
+    margin: 0;
+    z-index: 1;
   }
   .mexico-decor::before {
-    width: 145px;
-    height: 145px;
-    right: 14px;
-    top: 9px;
+    width: 76px;
+    height: 76px;
+    right: 0;
+    top: 1px;
   }
   .mexico-decor img {
-    border-width: 5px;
+    border-width: 3px;
   }
   .decor-flag {
-    width: 172px;
-    height: 99px;
-    right: -8px;
-    top: 20px;
-  }
-  .decor-hat {
-    width: 112px;
-    height: 78px;
-    left: 68px;
-    bottom: 0;
+    width: 78px;
+    height: 45px;
+    right: 0;
+    top: 10px;
   }
   .decor-katrina {
-    width: 90px;
-    height: 120px;
-    left: 0;
-    bottom: 85px;
+    width: 43px;
+    height: 58px;
+    left: 1px;
+    bottom: 22px;
   }
   .decor-sun {
-    right: 4px;
-    top: 0;
-    font-size: 1.35rem;
+    right: 2px;
+    top: -11px;
+    font-size: 0.85rem;
   }
   .attractions-grid {
     gap: 9px;
