@@ -258,7 +258,7 @@ h2 {
 .decor-flag {
   width: 260px;
   height: 150px;
-  right: -18px;
+  left: 125px;
   top: 30px;
   transform: rotate(5deg);
   z-index: 3;
