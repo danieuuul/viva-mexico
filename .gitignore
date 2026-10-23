@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+
+# Artefatos de build
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Ambiente
+.env
+.env.local
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
