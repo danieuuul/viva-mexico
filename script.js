@@ -1,6 +1,6 @@
 const attractions = [
   {
-    name: 'Bistrô Chapultepec',
+    name: 'Bistro Chapultepec',
     folder: 'bistro-chapultepec',
     principal: 'images (5)-principal.jpg',
     photos: [
@@ -47,7 +47,7 @@ const attractions = [
       "Rather than functioning like a standard commercial hotel, Casa Polanco is designed to feel like visiting a wealthy art collector's home. Guests enjoy complimentary afternoon tea and artisanal cocktails served in its elegant library."
   },
   {
-    name: 'Chapultepec Castle (Castillo de Chapultepec)',
+    name: 'Chapultepec Castle',
     folder: 'castillo-chapultepec',
     principal:
       'castillo-de-chapultepec-museu-nacional-de-historia-principal.jpg',
@@ -79,7 +79,7 @@ const attractions = [
       'It is the only royal castle in North America that actually served as an official residence for royalty. It was home to Emperor Maximilian I of Mexico and Empress Carlota in the 1860s.'
   },
   {
-    name: 'Chichén Itzá',
+    name: 'Chichen Itza',
     folder: 'chichen-itza',
     principal: 'images (1)-principal.jpg',
     photos: [
@@ -154,7 +154,7 @@ const attractions = [
       'The island earned its name when Spanish explorer Francisco Hernández de Córdoba landed in 1517 and discovered numerous statues dedicated to Ixchel, the Maya goddess of fertility, childbirth, and medicine.'
   },
   {
-    name: 'National Museum of Anthropology (Museo Nacional de Antropología)',
+    name: 'National Museum of Anthropology',
     folder: 'museo-nacional-antropologia',
     principal: 'images (3)-principal.jpg',
     photos: [
@@ -180,7 +180,7 @@ const attractions = [
       'The courtyard is centered around a massive single-column umbrella structure, El Paraguas, that pours an artificial waterfall into a lower basin, symbolizing a sacred Mesoamerican tree.'
   },
   {
-    name: 'Palace of Fine Arts (Palacio de Bellas Artes)',
+    name: 'Palace of Fine Arts',
     folder: 'palacio-bellas-artes',
     principal: 'images (2)-principal.jpg',
     photos: [
@@ -209,7 +209,7 @@ const attractions = [
       'The main theater stage features a massive 22-ton crystal fold curtain crafted by Tiffany & Co. in New York, composed of nearly one million pieces of colored glass depicting the Valley of Mexico and its volcanoes.'
   },
   {
-    name: 'Pueblo Maya',
+    name: 'Maya Village',
     folder: 'pueblo-maya',
     principal: 'transferir (1)-principal.jpg',
     photos: [
@@ -273,7 +273,7 @@ function renderDots() {
   document.querySelector('#carousel-dots').innerHTML = currentAttraction.photos
     .map(
       (_, index) =>
-        `<button class="dot ${index === currentSlide ? 'active' : ''}" type="button" aria-label="Ir para foto ${index + 1}" data-slide="${index}"></button>`
+        `<button class="dot ${index === currentSlide ? 'active' : ''}" type="button" aria-label="Go to photo ${index + 1}" data-slide="${index}"></button>`
     )
     .join('')
   document
@@ -292,7 +292,7 @@ function showSlide(index) {
   )
   carouselBackdrop.src = currentImage
   carouselImage.src = currentImage
-  carouselImage.alt = `${currentAttraction.name} - foto ${currentSlide + 1}`
+  carouselImage.alt = `${currentAttraction.name} - photo ${currentSlide + 1}`
   document.querySelector('#slide-counter').textContent =
     `${String(currentSlide + 1).padStart(2, '0')} / ${String(currentAttraction.photos.length).padStart(2, '0')}`
   renderDots()
@@ -340,8 +340,8 @@ const markMusicAsPlaying = () => {
   document.querySelector('#music-button').classList.add('is-playing')
   document
     .querySelector('#music-button')
-    .setAttribute('aria-label', 'Desligar música de fundo')
-  document.querySelector('#music-status').textContent = 'Música ambiente ligada'
+    .setAttribute('aria-label', 'Turn off background music')
+  document.querySelector('#music-status').textContent = 'Ambient sound on'
 }
 
 const playMusic = () => backgroundMusic.play().then(markMusicAsPlaying)
@@ -377,15 +377,15 @@ document.querySelector('#music-button').addEventListener('click', () => {
   if (backgroundMusic.paused) {
     playMusic().then(() => {
       button.classList.add('is-playing')
-      button.setAttribute('aria-label', 'Desligar música de fundo')
+      button.setAttribute('aria-label', 'Turn off background music')
       document.querySelector('#music-status').textContent =
-        'Música ambiente ligada'
+        'Ambient sound on'
     })
   } else {
     backgroundMusic.pause()
     button.classList.remove('is-playing')
-    button.setAttribute('aria-label', 'Ligar música de fundo')
+    button.setAttribute('aria-label', 'Turn on background music')
     document.querySelector('#music-status').textContent =
-      'Som ambiente desligado'
+      'Ambient sound off'
   }
 })
